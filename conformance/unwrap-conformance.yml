@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source:
+  - https://www.unwrap.ai/why-unwrap
+  - well-known/unwrap-oauth-authorization-server.json
+standards:
+  - id: soc2-type-ii
+    conforms: true
+    evidence: Unwrap advertises SOC 2 Type II compliance on its site and llms.txt.
+  - id: gdpr
+    conforms: true
+    evidence: Unwrap advertises GDPR compliance; docs include a PII redaction feature.
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      MCP/NLP API publishes RFC 8414 OAuth 2.0 authorization-server metadata
+      with authorizationCode, clientCredentials and refreshToken grants and PKCE
+      (S256).
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported=[S256] in discovery document.
+  - id: oidc-discovery
+    conforms: true
+    evidence: /.well-known/openid-configuration served at nlp.api.production.unwrap.ai.
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint present in discovery document.
+  - id: graphql
+    conforms: true
+    evidence: Data API is GraphQL (Apollo) at data.api.production.unwrap.ai.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: GraphQL errors envelope, not application/problem+json.

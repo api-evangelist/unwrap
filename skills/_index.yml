@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: generated
+source: https://docs.unwrap.ai/collections/6774268412-api
+note: >-
+  Skills grounded in the real Unwrap GraphQL operations documented in the API
+  collection. Unwrap exposes GraphQL (not OpenAPI); operation names are verified
+  from the published docs.
+skills:
+  - file: unwrap-export-feedback.md
+    name: Export Unwrap feedback and taxonomy
+    api: https://data.api.production.unwrap.ai/
+    operations: [getOrganizations, entries, TeamGroupsTaxonomy]
+  - file: unwrap-import-feedback.md
+    name: Batch-import feedback and build groups in Unwrap
+    api: https://data.api.production.unwrap.ai/
+    operations: [BatchImport, buildGroupAsync]

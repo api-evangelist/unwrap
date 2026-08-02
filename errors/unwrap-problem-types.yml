@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unwrap.ai/collections/6774268412-api
+format: graphql-errors
+envelope:
+  field: errors
+  note: >-
+    Unwrap exposes a GraphQL API; failures are returned in the standard GraphQL
+    top-level "errors" array alongside any partial "data". HTTP transport-level
+    failures (auth, rate limiting) surface as HTTP status codes on
+    https://data.api.production.unwrap.ai/.
+problems:
+  - condition: unauthorized
+    cause: >-
+      Missing/invalid Bearer API key, or a token whose View membership was
+      revoked by an org admin.
+    remediation: Generate a new API key from the Unwrap user profile.
+    source: https://docs.unwrap.ai/articles/6140971517-getting-started
+  - condition: rate-limited
+    cause: More than 100 requests per token per minute.
+    remediation: Throttle to <=100 req/min/token or contact Unwrap for higher limits.
+    source: https://docs.unwrap.ai/articles/4888229887-api%2Fusage-restrictions
+  - condition: batch-too-large
+    cause: BatchImport entries array exceeds the 500-entry cap.
+    remediation: Split into batches of <=500 entries.
+    source: https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api
+  - condition: payload-too-large
+    cause: BatchImport payload exceeds the 10 MB limit.
+    remediation: Reduce payload size / split the request.
+    source: https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api
+  - condition: invalid-input-format
+    cause: Malformed BatchEntryInput (e.g. bad feedbackDate, missing required field).
+    remediation: Validate entries against the BatchEntryInput schema before submitting.
+    source: https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api
+  - condition: timeout
+    cause: Request exceeded the 30-second server timeout.
+    remediation: Reduce batch size so processing completes within 30s.
+    source: https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api

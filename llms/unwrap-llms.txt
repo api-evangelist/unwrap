@@ -1,0 +1,138 @@
+# Unwrap Knowledge Base
+
+
+## Getting Started
+
+- [Introduction](https://docs.unwrap.ai/articles/4023444124-intro)
+- [Creating an Account](https://docs.unwrap.ai/articles/9587426021-getting-started%2Fcreating-account)
+- [Data organization and permissions](https://docs.unwrap.ai/articles/5428409582-managing%20organizations)
+- [Adding Data](https://docs.unwrap.ai/articles/4286155307-getting-started%2Fadding-data)
+- [Slack Integration](https://docs.unwrap.ai/articles/8033006751-slack-integration)
+- [Real-time Alerts](https://docs.unwrap.ai/articles/3984222902-realtime-alerts)
+- [Recurring Digests](https://docs.unwrap.ai/articles/1941131677-digests)
+
+## Single Sign-On (SSO)
+
+- [Microsoft Entra SSO Setup Guide](https://docs.unwrap.ai/articles/2784523573-microsoft-entra-setup)
+- [Okta SSO Setup Guide](https://docs.unwrap.ai/articles/8433630403-okta-setup)
+
+## Integrating Feedback
+
+- [Integrating Custom Fields](https://docs.unwrap.ai/articles/7081658074-custom-metadata)
+- [Amazon Reviews](https://docs.unwrap.ai/articles/8965235754-amazon-reviews)
+- [BigQuery Data Ingestion](https://docs.unwrap.ai/articles/5095037784-big-query-data-ingestion)
+- [CSV Upload](https://docs.unwrap.ai/articles/1248256665-csvupload)
+- [Decagon](https://docs.unwrap.ai/articles/7719958681-decagon)
+- [Discord](https://docs.unwrap.ai/articles/3318879163-discord)
+- [FreshDesk](https://docs.unwrap.ai/articles/7852960047-freshdesk)
+- [Github Issues](https://docs.unwrap.ai/articles/8392257271-githubissues)
+- [Gladly](https://docs.unwrap.ai/articles/7269499797-gladly-conversations)
+- [Gong](https://docs.unwrap.ai/articles/2328767517-gong)
+- [Gorgias](https://docs.unwrap.ai/articles/5935152483-gorgias)
+- [Google Maps](https://docs.unwrap.ai/articles/3833424406-google-maps)
+- [Hacker News](https://docs.unwrap.ai/articles/4917502072-hackernews)
+- [Help Scout](https://docs.unwrap.ai/articles/4210191443-help-scout)
+- [Hubspot Feedback Submissions](https://docs.unwrap.ai/articles/5763723047-hubspotfeedbackrecords)
+- [Hubspot Sales Notes](https://docs.unwrap.ai/articles/8093504342-hubspotsalesmeetings)
+- [Hubspot Support Tickets](https://docs.unwrap.ai/articles/4457548182-hubspottickets)
+- [Instagram](https://docs.unwrap.ai/articles/7125611658-instagram)
+- [Intercom](https://docs.unwrap.ai/articles/6055035743-intercom)
+- [Jira](https://docs.unwrap.ai/articles/5684871711-jira)
+- [Kustomer](https://docs.unwrap.ai/articles/2355713075-kustomer)
+- [Medallia Survey](https://docs.unwrap.ai/articles/4336195715-medallia%20survey)
+- [Pendo Feedback](https://docs.unwrap.ai/articles/6932569874-pendo%20feedback)
+- [Qualtrics](https://docs.unwrap.ai/articles/3295344058-qualtrics)
+- [S3 Data Ingestion](https://docs.unwrap.ai/articles/5916807973-s3-data-ingestion)
+- [Salesforce Integration and Data](https://docs.unwrap.ai/articles/5444312991-integrating-salesforce-data)
+- [Shopify](https://docs.unwrap.ai/articles/7353874213-shopify)
+- [Snowflake](https://docs.unwrap.ai/articles/4329294125-snowflake)
+- [Talkdesk](https://docs.unwrap.ai/articles/7901076408-talkdesk)
+- [UserVoice](https://docs.unwrap.ai/articles/6386486935-uservoice)
+- [X (formerly Twitter)](https://docs.unwrap.ai/articles/1458761588-x)
+- [Zapier](https://docs.unwrap.ai/articles/8566920099-zapier)
+- [Zendesk and Zendesk Talk](https://docs.unwrap.ai/articles/7291861051-zendesk)
+- [Zoom (Meetings and Phone Calls)](https://docs.unwrap.ai/articles/4886482596-zoom)
+- [PII Redaction](https://docs.unwrap.ai/articles/7099450113-pii)
+- [Front](https://docs.unwrap.ai/articles/5208132518-front)
+- [Aircall Transcripts](https://docs.unwrap.ai/articles/6770016896-aircall-transcripts)
+- [Mixpanel User Custom Fields](https://docs.unwrap.ai/articles/7738778519-mixpanel-user-custom-fields)
+- [Facebook Pages via Zapier](https://docs.unwrap.ai/articles/1540858448-zapier-facebook-pages)
+- [Trustpilot](https://docs.unwrap.ai/articles/2740529183-trustpilot)
+- [Slack](https://docs.unwrap.ai/articles/1307539822-slack)
+- [Sprout Social](https://docs.unwrap.ai/articles/1316459526-sprout-social)
+
+## Platform Features
+
+- [Unwrap Assistant](https://docs.unwrap.ai/articles/2096438644-dashboard-pages%2Fassistant)
+- [Home Page](https://docs.unwrap.ai/articles/6669078940-dashboard-pages%2Fhomepage)
+- [Feedback](https://docs.unwrap.ai/articles/6877436545-dashboard-pages%2Ffeedback-page)
+- [Taxonomy](https://docs.unwrap.ai/articles/4294164118-dashboard-pages%2Fexplore)
+- [Boards](https://docs.unwrap.ai/articles/6488278400-dashboard-pages%2Fboards)
+- [Unwrap SupportIQ](https://docs.unwrap.ai/articles/3449954721-supportiq)
+- [Filtering Feedback](https://docs.unwrap.ai/articles/9801267008-filters)
+- [Unwrap MCP](https://docs.unwrap.ai/articles/6412771011-unwrap-mcp)
+- [Assistant Context](https://docs.unwrap.ai/articles/1753289058-assistant-context)
+- [Group Filtering](https://docs.unwrap.ai/articles/7238790665-group-filtering)
+- [Scheduled Reports](https://docs.unwrap.ai/articles/4195445259-scheduled-reports)
+- [Assistant in Slack](https://docs.unwrap.ai/articles/5864323631-assistant-in-slack)
+- [Reporting](https://docs.unwrap.ai/articles/9957920225-reporting)
+
+## Linked Actions
+
+- [Unwrap Linked Actions: Setup Guide](https://docs.unwrap.ai/articles/1731765042-unwrap-linked-actions-setup-guide)
+
+## API
+
+- [Overview](https://docs.unwrap.ai/articles/4212347322-api%2Fapi-overview)
+- [Getting Started](https://docs.unwrap.ai/articles/6140971517-getting-started)
+- [Entries API Documentation](https://docs.unwrap.ai/articles/6686811175-api%2Ffetching-entries)
+- [Taxonomy API Documentation](https://docs.unwrap.ai/articles/2746215577-api%2Ffetching-taxonomy)
+- [Batch Upload Via API](https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api)
+- [Building Groups via API](https://docs.unwrap.ai/articles/5421674200-building-groups-via-api)
+- [Usage Restrictions](https://docs.unwrap.ai/articles/4888229887-api%2Fusage-restrictions)
+- [Exact Issue Ticket Lookup](https://docs.unwrap.ai/articles/5606934738-exact-issue-ticket-lookup)
+
+## Unwrap Changelog
+
+- [June 2026](https://docs.unwrap.ai/articles/2960607897-june-2026)
+- [May 2026](https://docs.unwrap.ai/articles/4973796074-may-2026)
+- [April 2026](https://docs.unwrap.ai/articles/6817094394-april-2026)
+- [March 2026](https://docs.unwrap.ai/articles/1029249996-march-2026)
+- [February 2026](https://docs.unwrap.ai/articles/8480538250-february-2026)
+- [January 2026](https://docs.unwrap.ai/articles/4324405154-january-2026)
+- [December 2025](https://docs.unwrap.ai/articles/3741970239-december)
+- [November 2025](https://docs.unwrap.ai/articles/5806566008-november)
+- [October 2025](https://docs.unwrap.ai/articles/9521718403-october)
+- [September 2025](https://docs.unwrap.ai/articles/6033311356-september)
+- [August 2025](https://docs.unwrap.ai/articles/7672997047-august)
+- [July 2025](https://docs.unwrap.ai/articles/3806337792-july)
+- [June 2025](https://docs.unwrap.ai/articles/1524510206-june)
+
+## Unwrap Surveys
+
+- [Getting Started with Unwrap Surveys](https://docs.unwrap.ai/articles/4437640707-getting-started-with-unwrap-surveys)
+- [Survey Dashboard](https://docs.unwrap.ai/articles/8415279927-survey-dashboard)
+- [Survey Settings Page (Configuring Your Survey)](https://docs.unwrap.ai/articles/8088101297-survey-settings-page-configuring-your-survey)
+- [Survey Design Page](https://docs.unwrap.ai/articles/5687500626-survey-design-page)
+- [Survey Intercepts](https://docs.unwrap.ai/articles/5453738793-survey-intercepts)
+- [Survey Recipients Page](https://docs.unwrap.ai/articles/8722299060-survey-recipients-page)
+- [Adding Recipients via API](https://docs.unwrap.ai/articles/6851132308-adding-recipients-through-api)
+- [Adding Surveys to Views](https://docs.unwrap.ai/articles/6001865449-creating-unwrap-survey-integration)
+
+## Video Library
+
+- [How to set up a new integration](https://docs.unwrap.ai/articles/2435935377-how-to-set-up-a-new-integration)
+- [How to set up a Saved Filter](https://docs.unwrap.ai/articles/9512801199-how-to-set-up-a-saved-filter)
+- [Building a board: Getting started](https://docs.unwrap.ai/articles/8304219653-building-a-board)
+- [How to build or edit a Group](https://docs.unwrap.ai/articles/6815151213-how-to-build-or-edit-a-group)
+- [Taxonomy](https://docs.unwrap.ai/articles/6223200103-explore-page)
+
+
+- [Overview - Replying to Feedback](https://docs.unwrap.ai/articles/7088014268-replying%2Foverview)
+- [May 2025](https://docs.unwrap.ai/articles/6919272305-may)
+- [Data Integrations Overview](https://docs.unwrap.ai/articles/9276689772-overview)
+- [Alert Subscribing](https://docs.unwrap.ai/articles/2235009023-alert-subscribing)
+- [Integrating Replies](https://docs.unwrap.ai/articles/1011964377-integrating-replies)
+- [How to Build Great Groups](https://docs.unwrap.ai/articles/8124496603-how-to-build-great-groups)
+- [Unwrap Surveys Mobile SDK](https://docs.unwrap.ai/articles/3417989868-unwrap-surveys-mobile-sdk)
+- [AWS Connect](https://docs.unwrap.ai/articles/3596158791-aws-connect)

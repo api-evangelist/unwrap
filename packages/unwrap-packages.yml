@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unwrap.ai/articles/3417989868-unwrap-surveys-mobile-sdk
+note: >-
+  Unwrap publishes a first-party Surveys Mobile SDK for iOS and Android used to
+  embed in-app surveys. Distribution is via GitHub/SPM, CocoaPods, and a private
+  Maven repo (repository access granted during onboarding). No public
+  npm/PyPI client library for the GraphQL data API was found; the docs provide a
+  Python requests example rather than a packaged SDK.
+packages:
+  - language: swift
+    registry: swift-package-manager
+    name: unwrap-surveys-ios
+    url: https://github.com/unwrap-nlp/unwrap-surveys-ios.git
+    install: Add https://github.com/unwrap-nlp/unwrap-surveys-ios.git via Swift Package Manager
+    platform: iOS 15+
+    official: true
+  - language: swift
+    registry: cocoapods
+    name: UnwrapSurveys
+    install: pod 'UnwrapSurveys', '~> 1.0'
+    platform: iOS 15+
+    official: true
+    note: private spec repo, requires onboarding access
+  - language: kotlin
+    registry: maven
+    name: ai.unwrap:surveys-sdk
+    url: https://maven.unwrap.ai/releases
+    install: implementation 'ai.unwrap:surveys-sdk:1.0.0'
+    platform: Android API 26+
+    official: true
+    note: private Maven repo, requires authenticated credentials

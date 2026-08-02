@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unwrap.ai/articles/6140971517-getting-started
+docs: https://docs.unwrap.ai/collections/6774268412-api
+summary:
+  types: [http, oauth2]
+  http_schemes: [bearer]
+  oauth2_flows: [authorizationCode, clientCredentials, refreshToken]
+  note: >-
+    The GraphQL data API authenticates with a personal API key sent as an HTTP
+    Bearer token. The MCP / NLP API authenticates via OAuth 2.0 (PKCE), with
+    discovery published at nlp.api.production.unwrap.ai/.well-known/.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    description: >-
+      Personal API key generated from the Unwrap user profile, sent as
+      "Authorization: Bearer <UNWRAP_ACCESS_KEY>". Each token is scoped to a
+      specific View (team_id); tokens expire if an org admin removes the
+      member. Endpoint: https://data.api.production.unwrap.ai/
+    applies_to: GraphQL data API
+    source: https://docs.unwrap.ai/articles/6140971517-getting-started
+  - name: oauth2
+    type: oauth2
+    description: >-
+      OAuth 2.0 authorization for the Unwrap MCP server; supports dynamic
+      client registration and static enterprise credentials.
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://nlp.api.production.unwrap.ai/oauth/authorize
+        tokenUrl: https://nlp.api.production.unwrap.ai/oauth/token
+        pkce: S256
+      - flow: clientCredentials
+        tokenUrl: https://nlp.api.production.unwrap.ai/oauth/token
+      - flow: refreshToken
+        tokenUrl: https://nlp.api.production.unwrap.ai/oauth/token
+    applies_to: MCP / NLP API (nlp.api.production.unwrap.ai)
+    source: well-known/unwrap-openid-configuration.json

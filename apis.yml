@@ -1,8 +1,27 @@
 aid: unwrap
 name: Unwrap
-description: 'Unwrap is a company surfaced as a portfolio company of scale-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: ai-apps. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Unwrap is an AI-powered customer intelligence platform, founded by ex-Amazon
+  Alexa product leaders, that aggregates customer feedback from every channel
+  (support tickets, surveys, app reviews, sales calls, social) and uses custom
+  NLP to auto-tag, cluster and surface actionable product insights without
+  manual analysis. It ships a GraphQL data API (Bearer API key) for fetching
+  feedback entries and taxonomy, batch-importing feedback, and building groups,
+  plus a read-only remote MCP server (OAuth 2.0) and a first-party Surveys
+  mobile SDK for iOS and Android. Unwrap is SOC 2 Type II and GDPR compliant.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/67c5e65b5323e6f7f216d5e7/67ddb0f28d559f418b033a59_unwrap-og-image.jpg
 url: https://raw.githubusercontent.com/api-evangelist/unwrap/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +29,122 @@ x-backed-by:
 - scale-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai Apps
-apis: []
+- Customer Feedback
+- Customer Intelligence
+- Product Analytics
+- Voice of Customer
+- NLP
+- GraphQL
+- MCP
+apis:
+- name: Unwrap GraphQL API
+  description: >-
+    GraphQL API for fetching feedback entries and group taxonomy, batch-importing
+    feedback, and building classification groups. Authenticated with a personal
+    API key sent as an HTTP Bearer token, scoped to a single View (team). Paged
+    with take/skip (max 100 entries per request); rate limited to 100 requests
+    per token per minute.
+  humanURL: https://docs.unwrap.ai/collections/6774268412-api
+  baseURL: https://data.api.production.unwrap.ai/
+  tags:
+  - GraphQL
+  - Customer Feedback
+  - Feedback Analytics
+  properties:
+  - type: Documentation
+    url: https://docs.unwrap.ai/collections/6774268412-api
+  - type: GettingStarted
+    url: https://docs.unwrap.ai/articles/6140971517-getting-started
+  - type: Authentication
+    url: authentication/unwrap-authentication.yml
+  - type: OAuthScopes
+    url: scopes/unwrap-scopes.yml
+  - type: RateLimits
+    url: rate-limits/unwrap-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/unwrap-problem-types.yml
+  - type: Conventions
+    url: conventions/unwrap-conventions.yml
+  - type: Idempotency
+    url: conventions/unwrap-conventions.yml
+  - type: DataModel
+    url: data-model/unwrap-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/unwrap-trust-center.yml
+- type: DomainSecurity
+  url: security/unwrap-domain-security.yml
 - type: Website
   url: https://www.unwrap.ai/
+- type: DeveloperPortal
+  url: https://docs.unwrap.ai/
+- type: Documentation
+  url: https://docs.unwrap.ai/
+- type: APIReference
+  url: https://docs.unwrap.ai/collections/6774268412-api
+- type: GettingStarted
+  url: https://docs.unwrap.ai/articles/6140971517-getting-started
+- type: Blog
+  url: https://www.unwrap.ai/blog
+- type: Pricing
+  url: https://www.unwrap.ai/pricing
+- type: SignUp
+  url: https://app.unwrap.ai
+- type: Login
+  url: https://app.unwrap.ai
+- type: TermsOfService
+  url: https://www.unwrap.ai/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.unwrap.ai/legal/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/unwrap-nlp
+- type: ChangeLog
+  url: https://docs.unwrap.ai/collections/1750160942-unwrap_changelog
+- type: Authentication
+  url: authentication/unwrap-authentication.yml
+- type: OAuthScopes
+  url: scopes/unwrap-scopes.yml
+- type: Conventions
+  url: conventions/unwrap-conventions.yml
+- type: Idempotency
+  url: conventions/unwrap-conventions.yml
+- type: ErrorCatalog
+  url: errors/unwrap-problem-types.yml
+- type: RateLimits
+  url: rate-limits/unwrap-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/unwrap-lifecycle.yml
+- type: DataModel
+  url: data-model/unwrap-data-model.yml
+- type: Conformance
+  url: conformance/unwrap-conformance.yml
+- type: Compliance
+  url: https://www.unwrap.ai/why-unwrap
+- type: WellKnown
+  url: well-known/unwrap-well-known.yml
+- type: MCPServer
+  url: mcp/unwrap-mcp.yml
+- type: LLMsTxt
+  url: llms/unwrap-llms.txt
+- type: Packages
+  url: packages/unwrap-packages.yml
+- type: SDKs
+  url: packages/unwrap-packages.yml
+- type: AgentSkill
+  url: skills/_index.yml

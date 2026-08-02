@@ -1,0 +1,13 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+source: https://www.unwrap.ai/#enterprise
+url: https://www.unwrap.ai/#enterprise
+certifications:
+- SOC 2
+- GDPR
+evidence:
+- source: https://www.unwrap.ai/#enterprise
+  keywords:
+  - soc 2
+  - gdpr

@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unwrap.ai/collections/1750160942-unwrap_changelog
+versioning:
+  scheme: unversioned
+  note: >-
+    The GraphQL data API is served from a single unversioned endpoint
+    (https://data.api.production.unwrap.ai/). No URI/header API version is
+    documented; the Apollo Explorer at the endpoint is the live schema of
+    record.
+changelog:
+  url: https://docs.unwrap.ai/collections/1750160942-unwrap_changelog
+  cadence: monthly
+  ref: changelog/unwrap-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation/sunset policy or RFC 8594 header support documented.
+sla:
+  url: null
+  note: No public SLA/uptime target found.
+status_page:
+  url: null
+  note: No public status page discovered as of 2026-07-21.

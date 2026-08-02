@@ -1,0 +1,58 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unwrap.ai/collections/6774268412-api
+api_style: graphql
+endpoint: https://data.api.production.unwrap.ai/
+authentication:
+  style: bearer-api-key
+  header: 'Authorization: Bearer <UNWRAP_ACCESS_KEY>'
+  scope: token bound to a single View (team_id)
+  ref: authentication/unwrap-authentication.yml
+idempotency:
+  supported: true
+  mechanism: natural-key
+  key_field: providerUniqueId
+  scope: BatchImport mutation
+  description: >-
+    Batch imports are deduplicated by the caller-supplied providerUniqueId on
+    each BatchEntryInput. Re-submitting an entry with the same providerUniqueId
+    updates rather than duplicates it, giving idempotent upserts. Incremental
+    sync is supported via the entries query modifiedSince parameter.
+  source: https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api
+pagination:
+  style: offset
+  params: [take, skip]
+  max_page_size: 100
+  note: >-
+    entries and TeamGroupsTaxonomy queries page with take (quantity) and skip
+    (offset); the entries query caps take at 100 per request.
+  source: https://docs.unwrap.ai/articles/6140971517-getting-started
+filtering:
+  input: FilterInput
+  fields: [startDate, endDate]
+  advanced:
+    input: FilterNode
+    format: stringified-JSON AST
+    operators: ['==', '!=', in, '!in', exists, not_exists, '>=', '<=']
+  source: https://docs.unwrap.ai/articles/5421674200-building-groups-via-api
+rate_limiting:
+  limit: 100 requests
+  window: per minute
+  per: token
+  ref: rate-limits/unwrap-rate-limits.yml
+  source: https://docs.unwrap.ai/articles/4888229887-api%2Fusage-restrictions
+batch_limits:
+  max_entries_per_request: 500
+  max_payload_bytes: 10485760
+  request_timeout_seconds: 30
+  import_delay: up to 24 hours between scheduling and full import
+  source: https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api
+async_operations:
+  note: >-
+    buildGroupAsync returns a jobId and typically completes in 5-60 minutes
+    depending on dataset size; BatchImport returns entriesScheduledForImport.
+  source: https://docs.unwrap.ai/articles/5421674200-building-groups-via-api
+error_semantics:
+  ref: errors/unwrap-problem-types.yml
+versioning:
+  ref: lifecycle/unwrap-lifecycle.yml

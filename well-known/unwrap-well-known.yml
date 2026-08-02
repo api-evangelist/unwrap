@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: probed /.well-known/ across Unwrap hosts
+hosts:
+  - host: https://nlp.api.production.unwrap.ai
+    note: Unwrap MCP + NLP API host — exposes OAuth 2.0 discovery for the MCP server
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: unwrap-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: unwrap-oauth-authorization-server.json
+      - path: /.well-known/security.txt
+        status: 401
+      - path: /.well-known/api-catalog
+        status: 401
+      - path: /.well-known/ai-plugin.json
+        status: 401
+  - host: https://data.api.production.unwrap.ai
+    note: GraphQL data API host — all /.well-known/ paths return 400
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+      - path: /.well-known/openid-configuration
+        status: 400
+      - path: /.well-known/oauth-authorization-server
+        status: 400
+  - host: https://www.unwrap.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+  - host: https://docs.unwrap.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://app.unwrap.ai
+    note: SPA — /.well-known/* returns the app HTML shell (200) not a real discovery document
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: HTML shell, not JSON

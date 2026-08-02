@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: well-known/unwrap-oauth-authorization-server.json
+docs: https://docs.unwrap.ai/articles/6412771011-unwrap-mcp
+note: >-
+  OAuth 2.0 scopes advertised by the Unwrap MCP / NLP API authorization server
+  discovery document. Scopes follow a team:<team_id>:<resource>:<action>
+  pattern; the wildcard "*" denotes any team the token is authorized for. All
+  published scopes are read-only.
+schemes:
+  - name: oauth2
+    source: well-known/unwrap-oauth-authorization-server.json
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://nlp.api.production.unwrap.ai/oauth/authorize
+        tokenUrl: https://nlp.api.production.unwrap.ai/oauth/token
+      - flow: clientCredentials
+        tokenUrl: https://nlp.api.production.unwrap.ai/oauth/token
+scopes:
+  - scope: team:*:teams:read
+    description: Read access to teams / views.
+    flows: [authorizationCode, clientCredentials]
+    sources: [well-known/unwrap-oauth-authorization-server.json]
+  - scope: team:*:groups:read
+    description: Read access to feedback groups.
+    flows: [authorizationCode, clientCredentials]
+    sources: [well-known/unwrap-oauth-authorization-server.json]
+  - scope: team:*:charts:read
+    description: Read access to charts.
+    flows: [authorizationCode, clientCredentials]
+    sources: [well-known/unwrap-oauth-authorization-server.json]
+  - scope: team:*:filters:read
+    description: Read access to filters.
+    flows: [authorizationCode, clientCredentials]
+    sources: [well-known/unwrap-oauth-authorization-server.json]
+  - scope: team:*:entries:read
+    description: Read access to feedback entries.
+    flows: [authorizationCode, clientCredentials]
+    sources: [well-known/unwrap-oauth-authorization-server.json]

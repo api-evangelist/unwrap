@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://docs.unwrap.ai/articles/6412771011-unwrap-mcp
+server:
+  name: unwrap
+  transport: http
+  url: https://nlp.api.production.unwrap.ai/mcp
+  auth:
+    type: oauth2
+    flows: [authorization_code, client_credentials, refresh_token]
+    authorization_endpoint: https://nlp.api.production.unwrap.ai/oauth/authorize
+    token_endpoint: https://nlp.api.production.unwrap.ai/oauth/token
+    registration_endpoint: https://nlp.api.production.unwrap.ai/oauth/register
+    pkce: S256
+    scopes:
+      - team:*:teams:read
+      - team:*:groups:read
+      - team:*:charts:read
+      - team:*:filters:read
+      - team:*:entries:read
+    note: >-
+      Dynamic client registration supported; organizations can also generate
+      shared static OAuth credentials from the Organizations page for
+      enterprise deployment.
+clients_supported:
+  - Claude Desktop / Web
+  - Claude Code
+  - ChatGPT (Developer Mode)
+  - Codex
+  - Cursor
+  - Gemini CLI
+  - GitHub Copilot
+tools:
+  - name: list_views
+    description: List the views (teams) available to the authenticated user.
+  - name: search_groups
+    description: Search feedback groups within a view.
+  - name: search_actionable_groups
+    description: Surface groups flagged as actionable.
+  - name: plot_chart
+    description: Render a chart over feedback data.
+  - name: sample_feedback_entries
+    description: Return a sample of feedback entries.
+  - name: analyze_entry_text
+    description: Analyze the text of a feedback entry.
+  - name: classify_feedback_entries
+    description: Classify feedback entries against the taxonomy.
+  - name: discover_filter_schema
+    description: Discover the available filter fields/schema for a view.
+  - name: search_segments
+    description: Search custom segment values.
+access: read-only

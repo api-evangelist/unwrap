@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.unwrap.ai/collections/1750160942-unwrap_changelog
+scheme: monthly-dated
+current: June 2026
+url: https://docs.unwrap.ai/collections/1750160942-unwrap_changelog
+entries:
+  - version: June 2026
+    date: '2026-06'
+    breaking: false
+    url: https://docs.unwrap.ai/articles/2960607897-june-2026
+    highlights:
+      - Usage Reporting Dashboard — track Unwrap adoption across web, API, MCP and Slack.
+      - Merge duplicate custom fields and permanently remove unused ones.
+      - Survey question branching with conditional routing.
+      - Native Slack integration replaces the prior Zapier-based method.
+      - New Sprout Social social-listening integration.
+  - version: May 2026
+    date: '2026-05'
+    url: https://docs.unwrap.ai/articles/4973796074-may-2026
+  - version: April 2026
+    date: '2026-04'
+    url: https://docs.unwrap.ai/articles/6817094394-april-2026
+  - version: March 2026
+    date: '2026-03'
+    url: https://docs.unwrap.ai/articles/1029249996-march-2026
+  - version: February 2026
+    date: '2026-02'
+    url: https://docs.unwrap.ai/articles/8480538250-february-2026
+  - version: January 2026
+    date: '2026-01'
+    url: https://docs.unwrap.ai/articles/4324405154-january-2026

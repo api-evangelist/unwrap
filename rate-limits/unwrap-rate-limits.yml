@@ -1,0 +1,39 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: Unwrap
+providerId: unwrap
+generated: '2026-07-21'
+method: searched
+created: '2026-07-21'
+modified: '2026-07-21'
+tags:
+  - Rate Limiting
+  - Customer Feedback
+description: >-
+  Unwrap GraphQL API rate limits are enforced per access token. Requests are
+  capped at 100 per token per minute; batch imports have additional size/timeout
+  ceilings. Contact Unwrap for needs beyond the published limits.
+sources:
+  - https://docs.unwrap.ai/articles/4888229887-api%2Fusage-restrictions
+  - https://docs.unwrap.ai/articles/4856432369-api%2Fbatch-upload-via-api
+limits:
+  - name: API requests
+    scope: token
+    metric: requests_per_minute
+    limit: 100
+    timeFrame: minute
+  - name: Batch import entries per request
+    scope: request
+    metric: entries
+    limit: 500
+    timeFrame: request
+  - name: Batch import payload size
+    scope: request
+    metric: bytes
+    limit: 10485760
+    timeFrame: request
+  - name: Request timeout
+    scope: request
+    metric: seconds
+    limit: 30
+    timeFrame: request

@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.unwrap.ai/collections/6774268412-api
+note: >-
+  Entity graph derived from the documented Unwrap GraphQL queries/mutations
+  (entries, TeamGroupsTaxonomy, BatchImport, buildGroupAsync). Not from an
+  OpenAPI spec — Unwrap exposes GraphQL only.
+entities:
+  - name: Organization
+    description: Top-level account; contains teams/views and members.
+  - name: Team
+    aka: View
+    id_field: teamId
+    description: A workspace/view scoping feedback data; API tokens are bound to one team.
+  - name: FeedbackEntry
+    aka: Entry
+    id_field: id
+    natural_key: providerUniqueId
+    fields: [feedbackEntryText, providerUniqueId, submittedAt, dataSource, submitterType, conversationParts, customFields, groupMemberships]
+    description: A unit of customer feedback ingested from a data source.
+  - name: Group
+    id_field: groupId
+    fields: [title, description, uniqueEntries, totalDescendents, parentGroupId]
+    description: A classified theme/topic of feedback; groups nest into a taxonomy.
+  - name: TaxonomyTree
+    description: Hierarchical arrangement of groups (up to ~5 nesting levels).
+  - name: CustomField
+    aka: Segment
+    description: Caller-defined metadata attached to entries; filterable segment values.
+relationships:
+  - from: Organization
+    to: Team
+    type: has_many
+  - from: Team
+    to: FeedbackEntry
+    type: has_many
+    via: teamId
+  - from: Team
+    to: Group
+    type: has_many
+    via: teamId
+  - from: FeedbackEntry
+    to: Group
+    type: has_many
+    via: groupMemberships
+  - from: Group
+    to: Group
+    type: has_many
+    via: parentGroupId
+    note: taxonomy nesting (parent -> children)
+  - from: FeedbackEntry
+    to: CustomField
+    type: has_many
+    via: customFields
