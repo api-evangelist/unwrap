@@ -9,6 +9,17 @@ description: >-
   feedback entries and taxonomy, batch-importing feedback, and building groups,
   plus a read-only remote MCP server (OAuth 2.0) and a first-party Surveys
   mobile SDK for iOS and Android. Unwrap is SOC 2 Type II and GDPR compliant.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
