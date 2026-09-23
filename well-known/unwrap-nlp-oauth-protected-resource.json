@@ -1,0 +1,1 @@
+{"resource":"https://nlp.api.production.unwrap.ai/mcp","authorization_servers":["https://nlp.api.production.unwrap.ai"],"scopes_supported":["team:*:teams:read","team:*:groups:read","team:*:charts:read","team:*:filters:read","team:*:entries:read"],"bearer_methods_supported":["header"]}

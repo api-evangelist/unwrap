@@ -1,44 +1,62 @@
-generated: '2026-07-21'
+generated: '2026-09-19'
 method: searched
 source: probed /.well-known/ across Unwrap hosts
 hosts:
+- host: https://nlp.api.production.unwrap.ai
+  note: Unwrap MCP + NLP API host — exposes OAuth 2.0 discovery for the MCP server
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: unwrap-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: unwrap-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/ai-plugin.json
+    status: 401
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: unwrap-nlp-oauth-protected-resource.json
+    bytes: 285
+  path_echo_control: passed
+- host: https://data.api.production.unwrap.ai
+  note: GraphQL data API host — all /.well-known/ paths return 400
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+  - path: /.well-known/openid-configuration
+    status: 400
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+- host: https://www.unwrap.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://docs.unwrap.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://app.unwrap.ai
+  note: SPA — /.well-known/* returns the app HTML shell (200) not a real discovery document
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: HTML shell, not JSON
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
   - host: https://nlp.api.production.unwrap.ai
-    note: Unwrap MCP + NLP API host — exposes OAuth 2.0 discovery for the MCP server
-    documents:
-      - path: /.well-known/openid-configuration
-        status: 200
-        file: unwrap-openid-configuration.json
-      - path: /.well-known/oauth-authorization-server
-        status: 200
-        file: unwrap-oauth-authorization-server.json
-      - path: /.well-known/security.txt
-        status: 401
-      - path: /.well-known/api-catalog
-        status: 401
-      - path: /.well-known/ai-plugin.json
-        status: 401
-  - host: https://data.api.production.unwrap.ai
-    note: GraphQL data API host — all /.well-known/ paths return 400
-    documents:
-      - path: /.well-known/security.txt
-        status: 400
-      - path: /.well-known/openid-configuration
-        status: 400
-      - path: /.well-known/oauth-authorization-server
-        status: 400
-  - host: https://www.unwrap.ai
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-      - path: /.well-known/openid-configuration
-        status: 404
-  - host: https://docs.unwrap.ai
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-  - host: https://app.unwrap.ai
-    note: SPA — /.well-known/* returns the app HTML shell (200) not a real discovery document
-    documents:
-      - path: /.well-known/openid-configuration
-        status: 200
-        note: HTML shell, not JSON
+    path: /.well-known/oauth-protected-resource
+    file: unwrap-nlp-oauth-protected-resource.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'

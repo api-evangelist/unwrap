@@ -1,0 +1,27 @@
+# Front Door AI Index — unwrap — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: unwrap
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.unwrap.ai
+  final_host: www.unwrap.ai
+  ownership: own
+  owner: unwrap
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 4
+  host_score: 4
+  density: 3.17
+  words: 1263
+  tiers:
+    agentic: 0
+    core: 4
+    model: 0
+  ambiguous: 5
+  top_terms:
+    AI: 4
+    intelligence: 4
+    smart: 1
