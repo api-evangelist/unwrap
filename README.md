@@ -64,6 +64,116 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Unwrap is a company surfaced as a portfolio company of scale-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: ai-apps. This profile is a lead awaiting the enrichment pipeline.
+Unwrap is an AI-powered customer intelligence platform, founded by ex-Amazon Alexa product leaders, that aggregates customer feedback from every channel (support tickets, surveys, app reviews, sales calls, social) and uses custom NLP to auto-tag, cluster and surface actionable product insights without manual analysis. It ships a GraphQL data API (Bearer API key) for fetching feedback entries and taxonomy, batch-importing feedback, and building groups, plus a read-only remote MCP server (OAuth 2.0) and a first-party Surveys mobile SDK for iOS and Android. Unwrap is SOC 2 Type II and GDPR compliant.
 
-Backed by: scale-venture-partners — https://www.unwrap.ai/
+**Areas:** Company · Ai Apps · Customer Feedback · Customer Intelligence · Product Analytics · Voice of Customer · Natural Language Processing · GraphQL · MCP
+
+## Unwrap on APIs.io
+
+Everything profiled for Unwrap is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/unwrap/](https://apis.io/providers/unwrap/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Unwrap GraphQL API](https://apis.io/apis/unwrap/unwrap-graphql-api/) — GraphQL API for fetching feedback entries and group taxonomy, batch-importing feedback, and building classification groups. Authenticated with a personal…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [unwrap](https://apis.io/servers/unwrap/unwrap/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Unwrap Authentication](https://apis.io/security/unwrap/unwrap-authentication/)
+- [Unwrap Domain Security](https://apis.io/security/unwrap/unwrap-domain-security/)
+- [Unwrap Trust Center](https://apis.io/security/unwrap/unwrap-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Unwrap Scopes](https://apis.io/scopes/unwrap/unwrap-scopes/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Unwrap Rate Limits](https://apis.io/rate-limits/unwrap/unwrap-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.unwrap.ai/)
+- [Documentation](https://docs.unwrap.ai/)
+- [Getting started](https://docs.unwrap.ai/articles/6140971517-getting-started)
+- [API reference](https://docs.unwrap.ai/collections/6774268412-api)
+- [Pricing](https://www.unwrap.ai/pricing)
+- [Sign up](https://app.unwrap.ai)
+- [Changelog](https://docs.unwrap.ai/collections/1750160942-unwrap_changelog)
+- [Blog](https://www.unwrap.ai/blog)
+- [Compliance](https://www.unwrap.ai/why-unwrap)
+- [Terms of service](https://www.unwrap.ai/legal/terms-of-service)
+- [Privacy policy](https://www.unwrap.ai/legal/privacy-policy)
+- [GitHub](https://github.com/unwrap-nlp)
+
+## API Evangelist rating
+
+**Kin Score 41.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 47.4 |
+
+**Agent readiness 36.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/unwrap/](https://apis.io/providers/unwrap/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Unwrap: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/unwrap/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
